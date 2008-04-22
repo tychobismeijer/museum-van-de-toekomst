@@ -8,10 +8,12 @@
     <title>RAP SPARQL test</title>
   </head>
   <body>
-    <form method="GET" action="doquery.php">
+    <form method="POST" action="doquery.php">
       <p>
         <textarea name="query" rows="20" cols="80">SELECT DISTINCT ?p WHERE {?a ?p ?b.} LIMIT 10</textarea>
       </p>
+      <input type="radio" name="rep" value="kb">Koninklijke Bibliotheek</input>
+      <input type="radio" name="rep" value="bg">Beeld en Geluid</input>
       <input type="submit" value="Query">
     </form>
   </body>
