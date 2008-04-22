@@ -1,6 +1,7 @@
 <?php
     //$querystring = 'SELECT DISTINCT ?p WHERE {?a ?p ?b.}';
-    $querystring = $_GET["query"];
+    $querystring = $_POST["query"];
+    $repurl = "http://webkr:webkr@sesame3.few.vu.nl/" . urlencode($_POST["rep"]);
 ?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -20,7 +21,7 @@
     include(RDFAPI_INCLUDE_DIR . "RdfAPI.php");
     print("--!>\n");
     // Create a SPARQL client
-    $client = ModelFactory::getSparqlClient("http://webkr:webkr@sesame3.few.vu.nl/kb");
+    $client = ModelFactory::getSparqlClient("$repurl");
     // Create a query
     $query = new ClientQuery();
     $query->query($querystring);
