@@ -1,0 +1,1 @@
+Museum of the futere using semantic web technology. The museum is a web version of the Bilderdijk museum at the VU.
